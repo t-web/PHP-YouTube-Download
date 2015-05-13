@@ -52,7 +52,7 @@ function generate_directlink($stream_map,$player)
     {
         parse_str($link,$r);
         $dllink = explode('.googlevideo.com/',$r['url']);
-        $dllink = 'http://redirector.googlevideo.com/'.$dllink[1].'&title=TITLE_HERE';
+        $dllink = 'http://redirector.googlevideo.com/'.$dllink[1].'&title=TITLE_HERE'; // Change TITLE_HERE of your desired title.
         echo '<a href="'.$dllink."&signature=".decipher($r['s'],$player).'">Download video-'.$r['itag'].'</a><br />';
     }
 }
