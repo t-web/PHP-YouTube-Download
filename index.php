@@ -70,7 +70,7 @@ function getpage($url)
 }
 
 if(empty($_GET['id'])){
-	echo '<form action=""><input type="text" name="id" placeholder="YOUTUBE ID" value=""><input type="submit" value="Search"></form>';
+	echo '<form action=""><input type="text" name="id" placeholder="YOUTUBE ID" value=""><input type="submit" value="Submit"></form>';
 }
 
 ?>
