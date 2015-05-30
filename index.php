@@ -26,7 +26,10 @@ if(!empty($_GET['id'])){
 	
 	if (!file_exists($json)){
 		$algos = file_get_contents('http://developers.wapmon.com/api/youtube/algo?player_id='.$player.'&sl='.strlen($siglength[0]).'.'.strlen($siglength[1]).'');
-		if(!$algos == 'error'){
+		if($algos == 'error'){
+			echo 'Unable to get data from Algo Server. Please contact us via email (support@wapmon.com)';
+		}
+		else{
 			$fp = fopen($json, "a");
 			if(flock($fp, LOCK_EX)){
 				fwrite($fp, $algos);
