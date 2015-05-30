@@ -2,7 +2,7 @@
  /******************************************************\
  	@AUTHOR			PMESCO CREATIONS
  	@ABOUT			YOUTUBE DOWNLOADER
- 	@VERSION		2.0
+ 	@VERSION		2.1
  	@WEBSITE		WWW.WAPMON.COM
 	@CONTACT		SUPPORT@WAPMON.COM
  \******************************************************/
@@ -17,12 +17,12 @@ if(!empty($_GET['id'])){
 	$player = explode('s.ytimg.com/yts/jsbin/html5player-',$o->assets->js);
 	$player = explode('/html5player.js',$player[1]);
 	$player = $player[0];
-	$json = ''.$player.'.json';
 	$stream_map = $o->args->url_encoded_fmt_stream_map;
 	$title = $o->args->title;
 	$output = array();
 	parse_str($stream_map,$output);
 	$siglength = explode('.',$output['s']);
+	$json = ''.md5(''.$player.'_'.strlen($siglength[0]).'.'.strlen($siglength[1]).'').'.json';
 	
 	if (!file_exists($json)){
 		$algos = file_get_contents('http://developers.wapmon.com/api/youtube/algo?player_id='.$player.'&sl='.strlen($siglength[0]).'.'.strlen($siglength[1]).'');
@@ -43,7 +43,7 @@ if(!empty($_GET['id'])){
 	echo '<title>Download '.$title.' to 3GP MP4 FLV WEBM - PMESCO CREATIONS YOUTUBE DOWNLOADER V2.0</title>';
 	echo ''.$title.'<br/>';
 	echo '<img src="https://i.ytimg.com/vi/'.$_GET['id'].'/default.jpg"/><br/>';
-	generate_directlink($stream_map,$player,$title);
+	generate_directlink($stream_map,md5(''.$player.'_'.strlen($siglength[0]).'.'.strlen($siglength[1]).''),$title);
 	
 }
 
