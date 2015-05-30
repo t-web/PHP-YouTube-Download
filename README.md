@@ -1,5 +1,5 @@
 # PHP-YouTube-Download
-Small PHP script to download videos from YouTube.com.<br/><br/><b>Installation</b><br/>
+Small PHP script to download videos from YouTube.com<br/><br/><b>Installation</b><br/>
 -Simply extract this script to your server/hosting.<br/>
 -execute index.php and enter your desired YOUTUBE ID<br/><br/>
 This script is storing some algo's to your server/hoting.<br/>
