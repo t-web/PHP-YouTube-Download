@@ -15,7 +15,7 @@ if(!empty($_GET['id'])){
 	
 	$o = json_decode('{'.$match[1].'}') ;
 	$player = explode('s.ytimg.com/yts/jsbin/html5player-',$o->assets->js);
-	$player = explode('/html5player.js',$player[1]);
+	$player = explode('/',$player[1]);
 	$player = $player[0];
 	$stream_map = $o->args->url_encoded_fmt_stream_map;
 	$title = $o->args->title;
