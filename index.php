@@ -36,6 +36,7 @@ if(!empty($_GET['id'])){
 		}
 	}
 	
+	echo '<title>Download '.$title.' to 3GP MP4 FLV WEBM - PMESCO CREATIONS YOUTUBE DOWNLOADER V2.0</title>';
 	echo ''.$title.'<br/>';
 	echo '<img src="https://i.ytimg.com/vi/'.$_GET['id'].'/default.jpg"/><br/>';
 	generate_directlink($stream_map,$player,$title);
@@ -113,7 +114,7 @@ function getpage($url){
 }
 
 if(empty($_GET['id'])){
-	echo '<form action=""><input type="text" name="id" placeholder="YOUTUBE ID" value=""><input type="submit" value="Search"></form>';
+	echo '<form action=""><input type="text" name="id" placeholder="YOUTUBE ID" value=""><input type="submit" value="Submit"></form>';
 }
 
 ?>
