@@ -40,7 +40,7 @@ if(!empty($_GET['id'])){
 		}
 	}
 	
-	echo '<title>Download '.$title.' to 3GP MP4 FLV WEBM - PMESCO CREATIONS YOUTUBE DOWNLOADER V2.0</title>';
+	echo '<title>Download '.$title.' to 3GP MP4 FLV WEBM - PMESCO CREATIONS YOUTUBE DOWNLOADER V2.1</title>';
 	echo ''.$title.'<br/>';
 	echo '<img src="https://i.ytimg.com/vi/'.$_GET['id'].'/default.jpg"/><br/>';
 	generate_directlink($stream_map,md5(''.$player.'_'.strlen($siglength[0]).'.'.strlen($siglength[1]).''),$title);
