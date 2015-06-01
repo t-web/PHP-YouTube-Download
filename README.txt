@@ -1,4 +1,4 @@
-# PHP-YouTube-Download
+PHP-YouTube-Download
 Small PHP script to download videos from YouTube.com
 
 Installation
